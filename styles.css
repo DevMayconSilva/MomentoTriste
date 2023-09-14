@@ -1,57 +1,89 @@
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #f6f6f6;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f6f6f6;
+  margin: 0;
+  padding: 20px; /* Espaçamento interno para o corpo */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-align: center; /* Centralizar o texto verticalmente */
+}
+
+.container {
+  text-align: center;
+  width: 100%;
+  max-width: 1200px;
+  padding: 20px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1 {
+  color: #e74c3c;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Aumentando a nitidez da sombra */
+  margin: 20px 0;
+}
+
+p {
+  font-size: 18px;
+  color: #555;
+  margin-bottom: 20px;
+}
+
+#funButton {
+  padding: 10px 20px;
+  font-size: 18px;
+  background-color: #e74c3c;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#funButton.button-clicked {
+  animation: translateY 0.5s ease-in-out; /* Define a animação de transição vertical */
+  transform-origin: center; /* Define o ponto de origem da transição vertical como o centro do botão */
+}
+
+@keyframes translateY {
+  0%, 100% {
+      transform: translateY(0); /* Começa e termina na posição original */
   }
-  
-  .container {
-    text-align: center;
-    width: 100%;
-    max-width: 1200px;
-    padding: 20px;
-    box-sizing: border-box;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  50% {
+      transform: translateY(-10px); /* Transição para cima */
   }
-  
-  h1 {
-    color: #e74c3c;
-    font-size: 28px;
-    margin-bottom: 10px;
-  }
-  
-  .image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 50%;
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.2);
-    margin: 20px 0;
-  }
-  
-  p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  #funButton {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  #funButton:hover {
-    background-color: #ff5a4d;
-  }
-  
+}
+
+
+#funButton:hover {
+  background-color: #ff5a4d;
+}
+
+
+/* Estilo de link (opcional) */
+a {
+  color: #e74c3c;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #ff5a4d;
+}
+
+/* Estilo da mensagem (opcional) */
+.message-container {
+  margin-top: 20px;
+}
